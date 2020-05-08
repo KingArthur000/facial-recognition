@@ -14,8 +14,9 @@ MODEL = 'cnn'  # default: 'hog', other one can be 'cnn' - CUDA accelerated (if a
 print('Loading known faces...')
 known_faces = []
 known_names = []
+name = 'known_face'
 
-image = face_recognition.load_image_file(str(KNOWN_FACES_DIR)+'/appa/new1.jpg')
+image = face_recognition.load_image_file(str(KNOWN_FACES_DIR)+'/'+str(name)+'/new1.jpg')
 
 encoding = face_recognition.face_encodings(image)[0]
 #visualizing what encoding is....
